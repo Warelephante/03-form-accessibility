@@ -38,40 +38,45 @@
       <div class="reservation-card">
         <h2>Reserve Now</h2>
         <div class="form-placeholder">
-          <form>
+          <form aria-label="Mystery dining reservation form">
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Name">
+              <label for="name" class="form-label visually-hidden">Name</label>
+              <input id="name" name="name" type="text" class="form-control" placeholder="Enter your full name" autocomplete="name" required autofocus>
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email">
+              <label for="email" class="form-label visually-hidden">Email</label>
+              <input id="email" name="email" type="email" class="form-control" placeholder="Enter your email address" autocomplete="email" required>
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Zip">
+              <label for="zip" class="form-label visually-hidden">ZIP Code</label>
+              <input id="zip" name="zip" type="text" class="form-control" placeholder="Enter your ZIP code" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" required>
             </div>
             <div class="mb-3">
-              <input type="number" class="form-control" placeholder="Party Size">
+              <label for="party-size" class="form-label visually-hidden">Party Size</label>
+              <input id="party-size" name="party-size" type="number" class="form-control" placeholder="Enter party size" min="1" max="20" required>
             </div>
             <div class="mb-3">
-              <select class="form-select">
-                <option selected>Choose...</option>
+              <label for="spice-level" class="form-label visually-hidden">Spice Level</label>
+              <select id="spice-level" name="spice-level" class="form-select" required>
+                <option value="" selected disabled>Choose...</option>
                 <option value="mild">Mild</option>
                 <option value="med">Medium</option>
                 <option value="spicy">Spicy</option>
               </select>
             </div>
             <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox">
-              <label class="form-check-label">
+              <input id="birthday-cake" class="form-check-input" type="checkbox">
+              <label for="birthday-cake" class="form-check-label visually-hidden">
                 Would you like to pretend it's your birthday for free cake?
               </label>
             </div>
             <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox">
-              <label class="form-check-label">
+              <input id="terms" class="form-check-input" type="checkbox" required>
+              <label for="terms" class="form-check-label visually-hidden">
                 I accept that I have no idea where I'll dine, and that's OK.
               </label>
             </div>
-            <a href="#" class="btn btn-lg btn-primary">Book My Mystery Meal!</a>
+            <button type="submit" class="btn btn-lg btn-primary">Book My Mystery Meal!</button>
           </form>
         </div>
       </div>
